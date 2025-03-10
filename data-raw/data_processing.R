@@ -9,15 +9,25 @@ library(here)
 library(readr)
 library(readxl)
 library(openxlsx)
+library(dplyr)
 
 # Read data --------------------------------------------------------------------
-# data_in <- readr::read_csv("data-raw/dataset.csv")
+data_in <- read_excel("data-raw/RAW_DATA-water-points-SL.xlsx") |>
+  janitor::clean_names()
+
 # codebook <- readxl::read_excel("data-raw/codebook.xlsx") |>
 #  clean_names()
 
 # Tidy data --------------------------------------------------------------------
-## Clean the raw data into a tidy format here
 
+data_in |> View()
+
+glimpse(data_in)
+
+data_in |>
+
+  select(district:section, type)
+  names()
 
 # Export Data ------------------------------------------------------------------
 usethis::use_data(washdataportalsl, overwrite = TRUE)
