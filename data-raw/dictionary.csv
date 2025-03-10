@@ -1,0 +1,5 @@
+"directory","file_name","variable_name","variable_type","description"
+"data/","washdataportalsl.rda","district","character", "District of the water point location."
+"data/","washdataportalsl.rda","chiefdom","character", "Chiefdom of the water point location."
+"data/","washdataportalsl.rda","section","character", "Section of the water point location."
+"data/","washdataportalsl.rda","type_of_water_point","character", "Type of water point."

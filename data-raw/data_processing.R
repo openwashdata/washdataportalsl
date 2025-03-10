@@ -20,14 +20,11 @@ data_in <- read_excel("data-raw/RAW_DATA-water-points-SL.xlsx") |>
 
 # Tidy data --------------------------------------------------------------------
 
-data_in |> View()
+washdataportalsl <- data_in |>
+  select(district:section, type_of_water_point)
 
-glimpse(data_in)
-
-data_in |>
-
-  select(district:section, type)
-  names()
+washdataportalsl |>
+  count(type_of_water_point) |> View()
 
 # Export Data ------------------------------------------------------------------
 usethis::use_data(washdataportalsl, overwrite = TRUE)
